@@ -1,17 +1,20 @@
 ![](https://badgen.net/badge/Editor.js/v2.0/blue)
 
-# Marker Tool
+# Superscript Tool
 
-Marker Tool for highlighting text-fragments for the [Editor.js](https://editorjs.io).
+Subscript Tool for highlighting text-fragments for the [Editor.js](https://editorjs.io).
 
-![](assets/example.gif)
 
 ## Installation
 
 ### Install via NPM
 
+Compile
+```shell
+npm i
+npx webpack
+```
 Get the package
-
 ```shell
 npm i --save-dev @editorjs/marker
 ```
@@ -19,7 +22,7 @@ npm i --save-dev @editorjs/marker
 Include module at your application
 
 ```javascript
-const Marker = require('@editorjs/marker');
+const Superscript = require('@editorjs/marker');
 ```
 
 ### Download to your project's source dir
@@ -49,8 +52,8 @@ var editor = EditorJS({
   
   tools: {
     ...
-    Marker: {
-      class: Marker,
+    superscript: {
+      class: Superscript,
       shortcut: 'CMD+SHIFT+M',
     }
   },
@@ -65,13 +68,13 @@ This Tool has no config params
 
 ## Output data
 
-Marked text will be wrapped with a `mark` tag with an `cdx-marker` class.
+Marked text will be wrapped with a `sup` tag with an `cdx-superscript` class.
 
 ```json
 {
     "type" : "text",
     "data" : {
-        "text" : "Create a directory for your module, enter it and run <mark class=\"cdx-marker\">npm init</mark> command."
+        "text" : "Create a directory for your module, enter it and run <sup class=\"cdx-superscript\">npm init</sup> command."
     }
 }
 ```
